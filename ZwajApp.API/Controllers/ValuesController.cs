@@ -26,7 +26,7 @@ namespace ZwajApp.API.Controllers
         //     // throw new Exception("Test exception");
         //     return new string[] { "value1", "value2" };
         // }
-
+        [AllowAnonymous]
         public async Task<IActionResult> GetValues()
         {
             var values =await _context.Values.ToListAsync();

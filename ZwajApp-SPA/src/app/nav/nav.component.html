@@ -1,0 +1,60 @@
+<nav class="rtl navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="logo navbar-brand"href="#">
+    <i class="fa fa-heart" aria-hidden="true">
+    </i>زواج<i class="fa fa-heart" aria-hidden="true"> </i></a>
+  <ul class="nav-link navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#">الرئيسية </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">بحث</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">تواصل</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">دردشة</a>
+    </li>
+    <li class="nav-item">
+        <a *ngIf="loggedIn()" class="nav-link" (click)="loggedOut()">خروج</a>
+      </li>
+  </ul>
+
+  <div class="dropdown">
+      <a *ngIf="loggedIn()" class="nav-link dropdown-toggle text-light">
+        مرحبا بك
+      </a>
+    
+      <div class="dropdown-menu">
+        <a class="dropdown-item"><i class="fa fa-user-o" aria-hidden="true"></i>
+          ملفي الشخصي</a>
+          <div class="dropdown-divider"></div>
+        <a class="dropdown-item"><i class="fa fa-sign-out"></i>
+          خروج</a>
+      </div>
+    </div>
+
+  <form *ngIf="!loggedIn()" (ngSubmit)="login()" #loginForm = "ngForm" class="form-inline my-2 my-lg-0">
+    <input name="username" required [(ngModel)]="model.username" class="form-control mr-sm-2" type="text" placeholder="إسم المشترك">
+    <input name="password" required [(ngModel)]="model.password" class="form-control mr-sm-2" type="password" placeholder="كلمة السر">
+    <button [disabled]="!loginForm.valid" style="font-weight:bold;font-family:'JF-Flat';font-size:1.0rem" class="btn btn-secondary my-2 my-sm-0" type="submit">تفضل
+      بالدخول</button>
+  </form>
+</nav>
+
+<!-- <pre>
+  Form Valid : {{loginForm.valid}}
+  Form Touched : {{loginForm.touched}}
+  Form Dirty : {{loginForm.dirty}}
+  Form Values : {{loginForm.value | json}}
+
+  Username Valid : {{username.valid}}
+  Username Touched : {{username.touched}}
+  Username Dirty : {{username.dirty}}
+  Username Value : {{username.value}}
+
+  Password Valid : {{password.valid}}
+  Password Touched : {{password.touched}}
+  Password Dirty : {{password.dirty}}
+  Password Value : {{password.value}}
+</pre> -->
