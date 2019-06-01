@@ -73,7 +73,6 @@ namespace ZwajApp.API.Controllers
             });
         }
 
-
     }
 
 }
