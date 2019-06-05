@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap-v4-rtl/dist/css/bootstrap-rtl.css";
+@import "~bootswatch/dist/Sketchy/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
+@import "~alertifyjs/build/css/alertify.min.css";
+@import "~alertifyjs/build/css/themes/bootstrap.css";
+@import url("assets/all-styles.css");
 /* fonts */
 /* @import url(http://fonts.googleapis.com/ar/earlyaccess/droidarabickufi.css); */
 @font-face {font-family: "JF-Flat"; src: url("./assets/fonts/JF-Flat-Regular.ttf");}
@@ -10,6 +14,3 @@
 @font-face {font-family: "Droid-Arabic-Kufi"; src: url("./assets/fonts/Droid-Arabic-Kufi.ttf");}
 @font-face {font-family: "ToyorAljanah"; src: url("./assets/fonts/ToyorAljanah-Regular.otf");}
 
-body{
-    font-family: "JF-Flat";
-}
