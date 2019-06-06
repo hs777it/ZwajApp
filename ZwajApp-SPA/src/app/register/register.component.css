@@ -2,3 +2,10 @@
     font-family: "JF-Flat";
 }
 
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid hotpink; /* pink */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #f70602; /* red */
+  }  
