@@ -35,7 +35,7 @@
   <form *ngIf="!loggedIn()" (ngSubmit)="login()" #loginForm = "ngForm" class="ml-5 form-inline my-2 my-lg-0">
     <input name="username" required [(ngModel)]="model.username" class="form-control mr-sm-2" type="text" placeholder="إسم المشترك">
     <input name="password" required [(ngModel)]="model.password" class="form-control mr-sm-2" type="password" placeholder="كلمة السر">
-    <button [disabled]="!loginForm.valid" class="btn btn-secondary my-2 my-sm-0 nav-link" type="submit">تفضل
+    <button [disabled]="!loginForm.valid" class="btn btn-secondary sm-0 nav-link" type="submit">تفضل
       بالدخول</button>
   </form>
 </nav>

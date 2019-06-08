@@ -1,0 +1,81 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-4 mt-3">
+      <div class="card">
+        <img class="card-img-top img-thumbnail" src="{{user.photoURL}}" alt="{{user.knownAs}}">
+        <div class="card-body">
+          <div>
+            <strong>مكان الإقامة </strong>
+            <p>{{user.country}},{{user.city}}</p>
+          </div>
+          <div>
+            <strong>العمر </strong>
+            <p>{{user.age}}</p>
+          </div>
+          <div>
+            <strong>آخر ظهور </strong>
+            <p>{{user.lastActive}}</p>
+          </div>
+          <div>
+            <strong>مشترك منذ </strong>
+            <p>{{user.created}}</p>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="btn-group d-flex">
+            <button class="btn btn-primary w-100">إعجاب</button>
+            <button class="btn btn-primary ml-2 w-100">مراسلة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-8">
+      <div class="tab-Panel">
+        <tabset class="member-tabset">
+          <tab heading="أنا {{user.knownAs}}">
+            <div class="card">
+              <div class="card-header">
+                <h4>أعرفك بنفسي</h4>
+              </div>
+              <div class="card-text mt-3 p-2">
+                <p>{{user.introduction}}</p>
+              </div>
+            </div>
+            <div class="card mt-4">
+              <div class="card-header">
+                <h4>أبحث عن</h4>
+              </div>
+              <div class="card-text mt-3 p-2">
+                <p>{{user.lookingFor}}</p>
+              </div>
+            </div>
+          </tab>
+
+          <tab heading="هواياتي">
+            <div class="card">
+              <div class="card-header">
+                <h4>هواياتي</h4>
+              </div>
+              <div class="card-text mt-3 p-2">
+                <p>{{user.interests}}</p>
+              </div>
+            </div>
+          </tab>
+
+          <tab heading="ألبوم الصور">
+            
+            <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+          </tab>
+
+          <tab heading="الرسائل">
+            <h4>الرسائل</h4>
+            <p>الرسائل قادمة</p>
+          </tab>
+
+        </tabset>
+      </div>
+    </div>
+  </div>
+</div>
