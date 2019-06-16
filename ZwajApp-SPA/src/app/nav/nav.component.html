@@ -24,7 +24,7 @@
       </a>
     
       <div *dropdownMenu class="dropdown-menu mt-3 mnav">
-        <a class="dropdown-item mnav"><i class="fa fa-user-o" aria-hidden="true"></i>
+        <a class="dropdown-item mnav" [routerLink]="['/member/edit']"><i class="fa fa-user-o" aria-hidden="true"></i>
           ملفي الشخصي</a>
           <div class="dropdown-divider"></div>
         <a (click)="loggedOut()" class="dropdown-item mnav"><i class="fa fa-sign-out"></i>
